@@ -104,7 +104,7 @@ the line are required.
    files is sent to the `gh-pages` branch. Otherwise, the script execution log
    will indicate what the problem is.
 
-## 1 задание HTML
+## компонент Profile 1 задание HTML
 
 <div class="profile">
   <div class="description">
@@ -134,7 +134,7 @@ the line are required.
   </ul>
 </div>
 
-## пример использования
+## 1 пример использования
 
 import user from 'path/to/user.json;
 
@@ -146,7 +146,7 @@ import user from 'path/to/user.json;
   stats={user.stats}
 />
 
-## 2 задание HTML
+## компонент Statistics 2 задание HTML
 
 <section class="statistics">
   <h2 class="title">Upload stats</h2>
@@ -178,13 +178,13 @@ import data from '/path/to/data.json';
 <Statistics title="Upload stats" stats={data} />
 <Statistics stats={data} />
 
-## 3 задание HTML FriendList
+## компонент 3 задание HTML FriendList
 
 <ul class="friend-list">
   <!-- Произвольное кол-во FriendListItem -->
 </ul>
 
-## 3 задание HTML FriendListItem
+## компонент 3 задание HTML FriendListItem
 
 <li class="item">
   <span class="status"></span>
@@ -198,7 +198,7 @@ import friends from 'path/to/friends.json';
 
 <FriendList friends={friends} />;
 
-## 4 задание HTML
+## компонент TransactionHistory 4 задание HTML
 
 <table class="transaction-history">
   <thead>
