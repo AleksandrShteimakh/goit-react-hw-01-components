@@ -1,4 +1,4 @@
-export default function FriendList(props) {
+export const FriendList = (props) => {
   // const { } = props;
   return (
     <ul class="friend-list">

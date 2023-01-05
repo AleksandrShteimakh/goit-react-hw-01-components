@@ -1,4 +1,4 @@
-export default function TransactionHistory(props) {
+export const TransactionHistory = (props) => {
   // const { } = props;
   return (
 <table class="transaction-history">
