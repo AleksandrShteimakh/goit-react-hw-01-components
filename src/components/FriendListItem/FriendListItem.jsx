@@ -1,12 +1,11 @@
+import css from './FriendListItem.module.css';
 import PropTypes from 'prop-types';
-import css from './FriendListItem.module.css'
 
-export const FriendListItem = ({avatar, name, isOnline}) => {
-  // const {} = props;
+export const FriendListItem = ({ avatar, name, isOnline }) => {
   return (
-    <li className={css.frien}>
-      <span className={isOnline ? css.isOnline : css.isOfline}></span>
-      <img className={css.avaterImage} src={avatar} alt={name} width="48" />
+    <li className={css.friend}>
+      <span className={isOnline ? css.isOnline : css.isOffline}></span>
+      <img className={css.avatarImage} src={avatar} alt={name} />
       {name}
     </li>
   );
