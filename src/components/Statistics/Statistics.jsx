@@ -1,31 +1,36 @@
 import PropTypes from 'prop-types'
+import css from './Statistics.module.css'
 
-export const Statistics = ({label, percentage}) => {
-
+const randColor = () => {
   return (
-    <section class="statistics">
-  <h2 class="title">Upload stats</h2>
+    '#' + Math.floor(Math.random() * 16777215)
+      .toString(16)
+      .padStart(6, '0')
+      .toUpperCase()
+  );
+};
 
-  <ul class="stat-list">
-    <li class="item">
-          <span class="label">{label}</span>
-          <span class="percentage">{percentage}</span>
-    </li>
-    <li class="item">
-      <span class="label">{label}</span>
-      <span class="percentage">{percentage}</span>
-    </li>
-    <li class="item">
-      <span class="label">{label}</span>
-      <span class="percentage">{percentage}</span>
-    </li>
-    <li class="item">
-      <span class="label">{label}</span>
-      <span class="percentage">{percentage}</span>
-    </li>
-  </ul>
+export const Statistics = ({stats, title}) => {
+  return (
+    <section className={css.statistics}>
+      {title && <h2 className={css.title}>{title}</h2>}
+      <ul className={css.statList}>
+        {stats.map(statElem => (
+
+          <li 
+            style={{
+              backgroundColor: randColor(),
+              width: `calc(100% / ${stats.length})`,
+            }}
+            key={statElem.id}
+            className={css.item}>
+            <span className="label">{statElem.label}</span>
+            <span className="percentage">{statElem.percentage}</span>
+            </li>
+        ))}
+          </ul>
 </section>
-  )
+  );
 };
 
 Statistics.propTypes = {
